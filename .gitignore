@@ -1,0 +1,16 @@
+# Файлы, которые генерируются автоматически и не нужны в репозитории
+
+# Terminus создаёт скрытые схемы под свой терминал (бывает по 6 МБ)
+*.hidden-color-scheme
+
+# Маркер, что bootstrap-установщик уже отработал
+.bootstrap-done
+
+# Кэш Python / байткод
+__pycache__/
+*.pyc
+
+# Сессии и локальный кэш Sublime
+*.cache
+*.sublime-workspace
+*.sublime_session

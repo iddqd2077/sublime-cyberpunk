@@ -1,0 +1,18 @@
+[
+	{
+		"keys": ["ctrl+alt+t"],
+		"command": "terminus_open",
+		"args": {
+			"cwd": "${file_path:${folder}}",
+			"show_in_panel": false
+		}
+	},
+	{
+		"keys": ["ctrl+alt+shift+t"],
+		"command": "terminus_open",
+		"args": {
+			"cwd": "${file_path:${folder}}",
+			"show_in_panel": true
+		}
+	}
+]

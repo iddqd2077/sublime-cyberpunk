@@ -1,0 +1,22 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+	"color_scheme": "Packages/User/Cyberpunk 2077.sublime-color-scheme",
+	"theme": "Adaptive.sublime-theme",
+	"highlight_line": true,
+	"draw_white_space": "all",
+	"rulers":
+	[
+		80,
+		120
+	],
+	"font_size": 11,
+	"translate_tabs_to_spaces": true,
+	"tab_size": 4,
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"save_on_focus_lost": true,
+}
