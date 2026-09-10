@@ -1,0 +1,30 @@
+{
+	// Свой терминал: текст — жёлтый, фон — как у кода.
+	"theme": "user",
+	"user_theme_colors": {
+		"background": "#030d22",
+		"foreground": "#ffd400",
+		"caret": "#ffd400",
+		"block_caret": "#ffd400",
+		"selection": "#310072",
+		"selection_foreground": "#ffd400",
+
+		"black": "#3a1b75",
+		"red": "#ee1682",
+		"green": "#06ad00",
+		"brown": "#ffd400",
+		"blue": "#3787d6",
+		"magenta": "#EA00D9",
+		"cyan": "#0ab2fa",
+		"white": "#f2f8ff",
+
+		"light_black": "#5c6d75",
+		"light_red": "#ff2e97",
+		"light_green": "#3dd69c",
+		"light_brown": "#ffd400",
+		"light_blue": "#5994CE",
+		"light_magenta": "#EA00D9",
+		"light_cyan": "#4bc5fa",
+		"light_white": "#ffffff"
+	}
+}
