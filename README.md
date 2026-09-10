@@ -62,9 +62,3 @@ Sublime `.sublime-color-scheme`. Основные цвета:
 
 Тема интерфейса — `Adaptive`, она автоматически подстраивает цвета панелей
 под активную цветовую схему.
-
-## Где искать другие темы
-
-- https://packagecontrol.io/browse/themes
-- https://colorsublime.github.io/
-- https://github.com/topics/sublime-text-theme
