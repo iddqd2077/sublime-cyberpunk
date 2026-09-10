@@ -2,7 +2,7 @@
 	"name": "Cyberpunk 2077",
 	"author": "iddqd2077 (palette from endormi/vscode-2077-theme)",
 	"variables": {
-		"bg": "hsl(220, 84%, 7%)",
+		"bg": "#030d22",
 		"fg": "#e6f1ff",
 		"cyan": "#0ef3ff",
 		"blue": "#0098df",
@@ -11,8 +11,7 @@
 		"pink": "#ff2e97",
 		"magenta": "#ff2cf1",
 		"purple": "#c832ff",
-		"red": "#ec107b",
-		"grey": "#7fa8d0"
+		"red": "#ec107b"
 	},
 	"globals": {
 		"background": "#030d22",
@@ -51,8 +50,9 @@
 
 		{ "name": "String", "scope": "string", "foreground": "#0ef3ff" },
 		{ "name": "String regexp", "scope": "string.regexp", "foreground": "#0ef3ff" },
-		{ "name": "String interpolation", "scope": "punctuation.definition.template-expression, punctuation.section.embedded", "foreground": "#ffd400" },
+		{ "name": "Template expression", "scope": "punctuation.definition.template-expression, punctuation.section.interpolation", "foreground": "#ffee80" },
 
+		{ "name": "Constant fallback", "scope": "constant", "foreground": "#c832ff" },
 		{ "name": "Number", "scope": "constant.numeric", "foreground": "#ffd400" },
 		{ "name": "Built-in constant", "scope": "constant.language", "foreground": "#ff2e97" },
 		{ "name": "User-defined constant", "scope": "constant.character, constant.other", "foreground": "#c832ff" },
@@ -63,18 +63,18 @@
 		{ "name": "Keyword other", "scope": "keyword.other", "foreground": "#a83dff" },
 		{ "name": "Storage", "scope": "storage", "foreground": "#40a9ff" },
 		{ "name": "Storage type", "scope": "storage.type", "foreground": "#ff1bf0" },
-		{ "name": "Storage modifier", "scope": "storage.modifier", "foreground": "#ff1bf0" },
 
 		{ "name": "Variable", "scope": "variable", "foreground": "#e6f1ff" },
 		{ "name": "Variable language", "scope": "variable.language", "foreground": "#3ec8ff" },
 		{ "name": "Variable parameter", "scope": "variable.parameter", "foreground": "#ff2e97" },
+		{ "name": "Variable function", "scope": "variable.function", "foreground": "#39c0ff" },
 		{ "name": "Variable other", "scope": "variable.other", "foreground": "#ff2e97" },
 		{ "name": "Variable other object", "scope": "variable.other.object", "foreground": "#40a9ff" },
 
-		{ "name": "Class name", "scope": "entity.name.class, entity.name.type.class, entity.name.type", "foreground": "#ff2e97" },
+		{ "name": "Entity fallback", "scope": "entity.name", "foreground": "#ffd400" },
+		{ "name": "Class/struct/enum name", "scope": "entity.name.class, entity.name.struct, entity.name.enum, entity.name.union, entity.name.constant, entity.name.concept, entity.name.type", "foreground": "#ff2e97" },
 		{ "name": "Inherited class", "scope": "entity.other.inherited-class", "foreground": "#6ab0ff", "font_style": "italic" },
 		{ "name": "Function name", "scope": "entity.name.function", "foreground": "#39c0ff" },
-		{ "name": "Function call", "scope": "meta.function-call", "foreground": "#39c0ff" },
 		{ "name": "Namespace", "scope": "entity.name.namespace", "foreground": "#0ef3ff" },
 		{ "name": "Tag name", "scope": "entity.name.tag", "foreground": "#ff2e97" },
 		{ "name": "Tag attribute", "scope": "entity.other.attribute-name", "foreground": "#ffd400" },
@@ -82,11 +82,10 @@
 		{ "name": "Library function", "scope": "support.function", "foreground": "#ffd400" },
 		{ "name": "Library constant", "scope": "support.constant", "foreground": "#39c0ff" },
 		{ "name": "Library class/type", "scope": "support.type, support.class", "foreground": "#ff2cf1", "font_style": "italic" },
-		{ "name": "Library variable", "scope": "support.other.variable", "foreground": "#39c0ff" },
+		{ "name": "Library variable", "scope": "support.variable, support.other.variable", "foreground": "#39c0ff" },
 		{ "name": "Support property name", "scope": "support.type.property-name", "foreground": "#0ef3ff" },
 
-		{ "name": "Punctuation parameters", "scope": "punctuation.definition.parameters", "foreground": "#ffee80" },
-		{ "name": "Punctuation separator", "scope": "punctuation.separator, punctuation.terminator", "foreground": "#8ab4f8" },
+		{ "name": "Punctuation parameters", "scope": "punctuation.definition.parameters, punctuation.section.parameters", "foreground": "#ffee80" },
 
 		{ "name": "Invalid", "scope": "invalid", "foreground": "#9e0a52" },
 		{ "name": "Invalid deprecated", "scope": "invalid.deprecated", "foreground": "#00d7e2" },

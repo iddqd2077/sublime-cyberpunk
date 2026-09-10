@@ -4,7 +4,7 @@
 		"Vintage",
 	],
 	"index_files": true,
-	"color_scheme": "Packages/User/Cyberpunk 2077.sublime-color-scheme",
+	"color_scheme": "Cyberpunk 2077.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 	"highlight_line": true,
 	"draw_white_space": "all",
