@@ -8,7 +8,7 @@
 | Файл / папка | Что это |
 |---|---|
 | `Preferences.sublime-settings` | Основные настройки: тема, шрифт, автосохранение |
-| `Cyberpunk 2077.sublime-color-scheme` | Кастомная схема по палитре темы Cyberpunk 2077 из VS Code |
+| `sublime-cyberpunk.sublime-color-scheme` | Кастомная схема по палитре темы Cyberpunk 2077 из VS Code |
 | `Default (Windows).sublime-keymap` | Горячие клавиши (Terminus: `Ctrl+Alt+T`) |
 | `C++ (MinGW).sublime-build` | Сборка C++ через `g++ -std=c++17` + запуск в Terminus |
 | `Python.sublime-build` | Запуск Python + вариант `Check Syntax` |
@@ -51,7 +51,7 @@
 - **Python:** `Ctrl+B` — запуск. `Ctrl+Shift+B` → `Check Syntax`.
 - **Терминал:** `Ctrl+Alt+T` — панель снизу, `Ctrl+Alt+Shift+T` — новая вкладка.
 
-## Цветовая схема Cyberpunk 2077
+## Цветовая схема Sublime Cyberpunk
 
 Палитра взята из темы `endormi/vscode-2077-theme` (VS Code) и перенесена в формат
 Sublime `.sublime-color-scheme`. Основные цвета:
