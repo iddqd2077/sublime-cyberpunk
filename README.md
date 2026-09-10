@@ -63,14 +63,3 @@ Sublime `.sublime-color-scheme`. Основные цвета:
 
 Тема интерфейса — `Cyberpunk.sublime-theme` (надстройка над `Adaptive`): фон
 сайдбара совпадает с фоном кода, иконки папок — в цвет акцента.
-
-## Патч грамматики C++ (std::cout)
-
-Sublime по умолчанию не красит квалифицированные имена (`std::cout`, `std::endl`)
-— это ограничение его грамматики C++. Патч находится **вне этого репозитория**:
-
-    %APPDATA%\Sublime Text\Packages\C++\C++.sublime-syntax
-
-Он добавляет scope для `std` (`entity.name.namespace`) и `cout` (`variable.other`).
-Чтобы применить заново — скопируй `C++.sublime-syntax` из установленного пакета
-`C++.sublime-package` и замени контекст `identifiers` (как в коммите).
