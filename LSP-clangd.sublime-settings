@@ -1,0 +1,10 @@
+{
+	// Для файлов без compile_commands.json clangd использует эти флаги.
+	// Ставим C++17 — как в сборке.
+	"initialization_options": {
+		"fallbackFlags": ["-std=c++17"],
+		"custom_command": [],
+		"clangd": {},
+	},
+	"binary": "auto",
+}
