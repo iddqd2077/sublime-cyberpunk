@@ -34,15 +34,14 @@
 
 1. Установи Sublime Text 4.
 2. Установи **Package Control** (https://packagecontrol.io/installation).
-3. Склонируй этот репозиторий в папку `Packages\User`:
-   Windows: `%APPDATA%\Sublime Text\Packages\User`
+3. Склонируй этот репозиторий в папку `Packages\User` Windows: `%APPDATA%\Sublime Text\Packages\User`
    ```powershell
    git clone https://github.com/iddqd2077/sublime-cyberpunk "$env:APPDATA\Sublime Text\Packages\User"
    ```
    Если папка не пустая — сначала сохрани оттуда свои файлы.
-4. Перезапусти Sublime. Плагин `sublime_bootstrap.py` сам поставит все пакеты
+5. Перезапусти Sublime. Плагин `sublime_bootstrap.py` сам поставит все пакеты
    из списка `WANTED_PACKAGES` вместе с зависимостями.
-5. Готово.
+6. Готово.
 
 ## Сборка кода
 
