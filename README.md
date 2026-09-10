@@ -10,7 +10,7 @@
 | `Preferences.sublime-settings` | Основные настройки: тема, шрифт, автосохранение |
 | `sublime-cyberpunk.sublime-color-scheme` | Кастомная схема по палитре темы Cyberpunk 2077 из VS Code |
 | `Cyberpunk.sublime-theme` | Тема-оверрайд Adaptive: фон сайдбара = фон кода, цветные папки |
-| `A File Icon.sublime-settings` | Иконки файлов в один цвет (акцент темы) |
+| `A File Icon.sublime-settings` | Иконки файлов — циан (`std`), папки — розовый (`cout`) |
 | `Default (Windows).sublime-keymap` | Горячие клавиши (Terminus: `Ctrl+Alt+T`) |
 | `C++ (MinGW).sublime-build` | Сборка C++ через `g++ -std=c++17` + запуск в Terminus |
 | `Python.sublime-build` | Запуск Python + вариант `Check Syntax` |
