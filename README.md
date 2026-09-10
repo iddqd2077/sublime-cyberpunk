@@ -35,7 +35,7 @@
 1. Установи Sublime Text 4.
 2. Установи **Package Control** (https://packagecontrol.io/installation).
 3. Склонируй этот репозиторий в папку `Packages\User`:
-   - Windows: `%APPDATA%\Sublime Text\Packages\User`
+   Windows: `%APPDATA%\Sublime Text\Packages\User`
    ```powershell
    git clone https://github.com/iddqd2077/sublime-cyberpunk "$env:APPDATA\Sublime Text\Packages\User"
    ```
