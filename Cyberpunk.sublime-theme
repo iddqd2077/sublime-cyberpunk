@@ -1,0 +1,26 @@
+{
+	"extends": "Adaptive.sublime-theme",
+	"rules":
+	[
+		{
+			"class": "sidebar_container",
+			"layer0.tint": "var(--background)"
+		},
+		{
+			"class": "icon_folder",
+			"layer0.tint": "var(--accent)",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "icon_folder",
+			"parents": [{"class": "window", "attributes": ["file_light"]}],
+			"layer0.tint": "var(--accent)",
+			"layer0.opacity": 0.9
+		},
+		{
+			"class": "disclosure_button_control",
+			"layer0.tint": "var(--accent)",
+			"layer0.opacity": { "target": 0.55, "speed": 4.0, "interpolation": "smoothstep" }
+		}
+	]
+}

@@ -5,7 +5,7 @@
 	],
 	"index_files": true,
 	"color_scheme": "sublime-cyberpunk.sublime-color-scheme",
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Cyberpunk.sublime-theme",
 	"highlight_line": true,
 	"draw_white_space": "all",
 	"rulers":

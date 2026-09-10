@@ -9,6 +9,8 @@
 |---|---|
 | `Preferences.sublime-settings` | Основные настройки: тема, шрифт, автосохранение |
 | `sublime-cyberpunk.sublime-color-scheme` | Кастомная схема по палитре темы Cyberpunk 2077 из VS Code |
+| `Cyberpunk.sublime-theme` | Тема-оверрайд Adaptive: фон сайдбара = фон кода, цветные папки |
+| `A File Icon.sublime-settings` | Иконки файлов в один цвет (акцент темы) |
 | `Default (Windows).sublime-keymap` | Горячие клавиши (Terminus: `Ctrl+Alt+T`) |
 | `C++ (MinGW).sublime-build` | Сборка C++ через `g++ -std=c++17` + запуск в Terminus |
 | `Python.sublime-build` | Запуск Python + вариант `Check Syntax` |
@@ -59,5 +61,16 @@ Sublime `.sublime-color-scheme`. Основные цвета:
 - ключевые слова `#ff2cf1`, константы `#ff2e97`, функции `#39c0ff`
 - комментарии `#0098df` (курсив), курсор `#ff2cf1`
 
-Тема интерфейса — `Adaptive`, она автоматически подстраивает цвета панелей
-под активную цветовую схему.
+Тема интерфейса — `Cyberpunk.sublime-theme` (надстройка над `Adaptive`): фон
+сайдбара совпадает с фоном кода, иконки папок — в цвет акцента.
+
+## Патч грамматики C++ (std::cout)
+
+Sublime по умолчанию не красит квалифицированные имена (`std::cout`, `std::endl`)
+— это ограничение его грамматики C++. Патч находится **вне этого репозитория**:
+
+    %APPDATA%\Sublime Text\Packages\C++\C++.sublime-syntax
+
+Он добавляет scope для `std` (`entity.name.namespace`) и `cout` (`variable.other`).
+Чтобы применить заново — скопируй `C++.sublime-syntax` из установленного пакета
+`C++.sublime-package` и замени контекст `identifiers` (как в коммите).
