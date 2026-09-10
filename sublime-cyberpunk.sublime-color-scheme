@@ -85,6 +85,7 @@
 		{ "name": "Library variable", "scope": "support.variable, support.other.variable", "foreground": "#39c0ff" },
 		{ "name": "Support property name", "scope": "support.type.property-name", "foreground": "#0ef3ff" },
 
+		{ "name": "Brackets / parens", "scope": "punctuation.section", "foreground": "#4c9ee0" },
 		{ "name": "Punctuation parameters", "scope": "punctuation.definition.parameters, punctuation.section.parameters", "foreground": "#ffee80" },
 
 		{ "name": "Invalid", "scope": "invalid", "foreground": "#9e0a52" },
