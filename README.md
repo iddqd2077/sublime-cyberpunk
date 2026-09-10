@@ -1,65 +1,120 @@
-# Sublime Text — мои настройки
+# Моя сборка Sublime Text
 
-Личный репозиторий настроек Sublime Text 4: пакеты, горячие клавиши, системы сборки
-для C++ и Python, цветовая схема и интерфейс.
+Это моя личная сборка Sublime Text 4. Сохранена тут на всякий случай —
+чтобы в любой момент восстановить всё (тема, пакеты, хоткеи, сборки) на любой машине.
 
-## Что внутри
+Ниже — инструкция: как восстановить и как всем этим пользоваться.
 
-| Файл / папка | Что это |
-|---|---|
-| `Preferences.sublime-settings` | Основные настройки: тема, шрифт, автосохранение |
-| `sublime-cyberpunk.sublime-color-scheme` | Кастомная схема по палитре темы Cyberpunk 2077 из VS Code |
-| `Cyberpunk.sublime-theme` | Тема-оверрайд Adaptive: фон сайдбара = фон кода, цветные папки |
-| `A File Icon.sublime-settings` | Иконки файлов — циан (`std`), папки — розовый (`cout`) |
-| `Default (Windows).sublime-keymap` | Горячие клавиши (Terminus: `Ctrl+Alt+T`) |
-| `C++ (MinGW).sublime-build` | Сборка C++ через `g++ -std=c++17` + запуск в Terminus |
-| `Python.sublime-build` | Запуск Python + вариант `Check Syntax` |
-| `Package Control.sublime-settings` | Список установленных пакетов |
-| `sublime_bootstrap.py` | Плагин: при первом запуске доставляет все пакеты |
-
-## Установленные пакеты
-
-- **Terminus** — терминал прямо в Sublime (`Ctrl+Alt+T`)
-- **SublimeLinter** + **SublimeLinter-cppcheck** — подсветка ошибок в C++
-- **C++ Snippets**, **All Autocomplete** — автодополнение
-- **GitGutter** — метки изменений напротив строк
-- **auto-save** — автосохранение
-- **A File Icon** — иконки файлов в боковой панели
-- **BracketHighlighter** — подсветка парных скобок
-- **SideBarEnhancements** — операции с файлами через ПКМ
-- **MarkdownPreview** — просмотр `.md` в браузере
-- **GitSavvy** — Git из редактора
-- **SynthWave 84**, **Dank Neon** — дополнительные неоновые схемы (на выбор)
-- **1337 / 3024 Color Scheme** — старые схемы
+---
 
 ## Как восстановить на новой машине
 
 1. Установи Sublime Text 4.
-2. Установи **Package Control** (https://packagecontrol.io/installation).
-3. Склонируй этот репозиторий в папку `Packages\User` Windows: `%APPDATA%\Sublime Text\Packages\User`
+2. Установи **Package Control**: https://packagecontrol.io/installation
+3. Склонируй репозиторий в папку `Packages\User`:
    ```powershell
    git clone https://github.com/iddqd2077/sublime-cyberpunk "$env:APPDATA\Sublime Text\Packages\User"
    ```
-   Если папка не пустая — сначала сохрани оттуда свои файлы.
-5. Перезапусти Sublime. Плагин `sublime_bootstrap.py` сам поставит все пакеты
-   из списка `WANTED_PACKAGES` вместе с зависимостями.
-6. Готово.
+   (если папка не пустая — сначала сохрани из неё свои файлы)
+4. Перезапусти Sublime → плагин `sublime_bootstrap.py` сам поставит все пакеты и патч грамматики.
+5. Перезапусти ещё раз → патч грамматики C++ подхватится.
 
-## Сборка кода
+### Бинарники, которые нужно поставить отдельно
 
-- **C++:** `Ctrl+B` — собрать и запустить. `Ctrl+Shift+B` — варианты `Build Only` / `Run Only`.
-  Нужен `g++` в `PATH` (MinGW).
-- **Python:** `Ctrl+B` — запуск. `Ctrl+Shift+B` → `Check Syntax`.
-- **Терминал:** `Ctrl+Alt+T` — панель снизу, `Ctrl+Alt+Shift+T` — новая вкладка.
+| Инструмент | Зачем | Команда установки |
+|---|---|---|
+| MinGW (g++) | компилятор C++ | установщик MinGW-w64 |
+| clangd (LLVM) | C++ сервер автодополнения | `winget install LLVM.LLVM` |
+| pyright | Python сервер | `npm i -g pyright` |
+| flake8 | Python линтер | `pip install flake8` |
 
-## Цветовая схема Sublime Cyberpunk
+---
 
-Палитра взята из темы `endormi/vscode-2077-theme` (VS Code) и перенесена в формат
-Sublime `.sublime-color-scheme`. Основные цвета:
+## Как писать и запускать код
 
-- фон `#030d22`, строки `#0ef3ff`, числа `#ffd400`
-- ключевые слова `#ff2cf1`, константы `#ff2e97`, функции `#39c0ff`
-- комментарии `#0098df` (курсив), курсор `#ff2cf1`
+### C++
 
-Тема интерфейса — `Cyberpunk.sublime-theme` (надстройка над `Adaptive`): фон
-сайдбара совпадает с фоном кода, иконки папок — в цвет акцента.
+1. Файл `main.cpp`:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+```
+2. **`Ctrl+B`** — собрать и запустить. **`Ctrl+Shift+B`** — варианты (`Build Only` / `Run Only`).
+
+### Python
+
+1. Файл `main.py` → **`Ctrl+B`** — запуск. `Ctrl+Shift+B` → `Check Syntax`.
+
+### Терминал
+
+**`Ctrl+Alt+T`** — панель снизу, `Ctrl+Alt+Shift+T` — вкладка. Жёлтый текст на тёмном фоне.
+
+---
+
+## Языковые серверы (LSP) — автодополнение и ошибки на лету
+
+Открой `.cpp` или `.py` — внизу справа появится имя сервера (`clangd` / `pyright`).
+Если нет: `Ctrl+Shift+P` → `LSP: Enable Language Server In Project`.
+
+| Клавиша | Действие |
+|---|---|
+| `F12` | перейти к определению |
+| `F2` | переименовать |
+| `Shift+F12` | найти использования |
+| `Ctrl+Alt+M` | панель ошибок |
+| `Ctrl+Alt+Space` | подсказка параметров функции |
+
+Остальное — `Ctrl+Shift+P` → набери `LSP:`.
+
+---
+
+## Пакеты: что делает каждый
+
+### Линтеры (подчёркивают ошибки)
+- **SublimeLinter** + **cppcheck** — ошибки в C++ на лету.
+- **Python Flake8 Lint** — стиль и ошибки в Python.
+
+### Git
+- **GitGutter** — полоски слева: что изменено/добавлено/удалено.
+- **GitSavvy** — git-интерфейс: `Ctrl+Shift+P` → `GitSavvy: Status`.
+
+### Сборка
+- **CMake** — подсветка `CMakeLists.txt`.
+- **CMakeBuilder** — сборка многофайловых CMake-проектов (`Ctrl+B` в папке проекта).
+
+### Удобства
+- **Terminus** — терминал.
+- **A File Icon** — иконки файлов (циан), папки (розовый).
+- **BracketHighlighter** — подсветка парных скобок.
+- **SideBarEnhancements** — ПКМ по файлу: rename, delete, copy path.
+- **MarkdownPreview** — предпросмотр `.md`.
+- **All Autocomplete** / **C++ Snippets** — базовое автодополнение и сниппеты.
+- **auto-save** — автосохранение.
+
+---
+
+## Цветовая схема
+
+Основная — **sublime-cyberpunk** (палитра из темы Cyberpunk 2077 для VS Code):
+фон `#030d22`, строки циан, числа жёлтые, ключевые слова магента, функции синие.
+
+Сменить: `Ctrl+Shift+P` → `UI: Select Color Scheme` (есть SynthWave 84, Dank Neon и др.).
+
+---
+
+## GitHub
+
+| Команда | Что делает |
+|---|---|
+| `git status` | что изменилось |
+| `git add -A` | добавить всё |
+| `git commit -m "текст"` | зафиксировать |
+| `git push` | отправить |
+| `git pull --rebase` | забрать правки |
+
+Правило: не правь один файл в двух местах (Sublime + сайт GitHub) — будет конфликт.
