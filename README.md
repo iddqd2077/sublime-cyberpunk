@@ -37,7 +37,7 @@
 3. Склонируй этот репозиторий в папку `Packages\User`:
    - Windows: `%APPDATA%\Sublime Text\Packages\User`
    ```powershell
-   git clone <URL-репозитория> "$env:APPDATA\Sublime Text\Packages\User"
+   git clone https://github.com/iddqd2077/sublime-cyberpunk "$env:APPDATA\Sublime Text\Packages\User"
    ```
    Если папка не пустая — сначала сохрани оттуда свои файлы.
 4. Перезапусти Sublime. Плагин `sublime_bootstrap.py` сам поставит все пакеты
