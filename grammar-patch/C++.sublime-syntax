@@ -258,9 +258,10 @@ contexts:
       captures:
         1: punctuation.accessor.double-colon.c++
         2: variable.other.c++
-    - match: '(?:(::)\s*)?{{identifier}}'
+    - match: '(?:(::)\s*)?({{identifier}})'
       captures:
         1: punctuation.accessor.double-colon.c++
+        2: variable.other.c++
 
   identifier-path-generic:
     - include: angle-brackets
@@ -592,6 +593,8 @@ contexts:
         1: keyword.control.c++
         2: keyword.control.c++
       push:
+        - match: '{{identifier}}'
+          scope: entity.name.namespace.c++
         - include: identifiers
         - match: ''
           pop: true
