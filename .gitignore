@@ -3,8 +3,9 @@
 # Terminus создаёт скрытые схемы под свой терминал (бывает по 6 МБ)
 *.hidden-color-scheme
 
-# Маркер, что bootstrap-установщик уже отработал
+# Маркеры служебных плагинов
 .bootstrap-done
+.satisfy-done
 
 # Кэш Python / байткод
 __pycache__/
