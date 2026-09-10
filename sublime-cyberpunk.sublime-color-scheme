@@ -86,6 +86,9 @@
 		{ "name": "Support property name", "scope": "support.type.property-name", "foreground": "#0ef3ff" },
 
 		{ "name": "Brackets / parens", "scope": "punctuation.section", "foreground": "#4c9ee0" },
+		{ "name": "Accessor", "scope": "punctuation.accessor", "foreground": "#4c9ee0" },
+		{ "name": "Terminator", "scope": "punctuation.terminator", "foreground": "#557a9e" },
+		{ "name": "Separator", "scope": "punctuation.separator", "foreground": "#557a9e" },
 		{ "name": "Punctuation parameters", "scope": "punctuation.definition.parameters, punctuation.section.parameters", "foreground": "#ffee80" },
 
 		{ "name": "Invalid", "scope": "invalid", "foreground": "#9e0a52" },
